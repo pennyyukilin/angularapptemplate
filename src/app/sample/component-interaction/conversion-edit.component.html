@@ -1,0 +1,22 @@
+<form #myForm="ngForm" (ngSubmit)="onsubmit()" *ngIf="item">
+  <div>
+    <label for="fromUnit">From Unit: </label><br />
+    <span id="fromUnit">{{item.fromUnit}}</span>
+  </div>
+  <div>
+    <label for="toUnit">toUnit</label><br />
+    <input class="k-textbox"  id="toUnit" name="toUnit" type="text" [(ngModel)]="item.toUnit" />
+  </div>
+  <div>
+    <label for="offset">offset</label><br />
+    <input class="k-textbox"  id="offset" name="offset" type="text" [(ngModel)]="item.offset" />
+  </div>
+  <div>
+    <label for="ratio">ratio</label><br />
+    <input class="k-textbox"  id="ratio" name="ratio" type="text" [(ngModel)]="item.ratio" />
+  </div>
+  <div>--------------------------------------</div>
+  <p>
+      <button type="submit" class="k-button">Edit (value not saved)</button>
+  </p>
+</form>

@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "types": []
+  },
+  "exclude": [
+    "./app/core/layout/layout-vertical.component.ts",
+    "./app/core/nav/nav-top.component.ts",
+    "./app/home/icon-menu/icon-menu.component.ts",
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,36 @@
+@import '~assets/scss/theme';
+
+.app-nav__sidenav {
+  width: 240px;
+  height: 100vh; /* 100% Full-height */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  display: inline-block;
+  position: fixed;
+  z-index: 10;
+}
+.app-nav__sidenav:before {
+  position: fixed;
+  z-index: -1;
+  left: 220px;
+  width: 60px;
+  height: 100vh; /* 100% Full-height */
+  overflow-x: hidden;
+  background: linear-gradient(90deg, black, transparent 50%);
+  content: '';
+}
+
+.app-nav__panelbar-wrapper {
+  height: calc(100vh - 64px); /* Full-height minus the toolbar's height */
+  height: -o-calc(100vh - 64px); /* opera */
+  height: -webkit-calc(100vh - 64px); /* google, safari */
+  height: -moz-calc(100vh - 64px); /* firefox */
+  background-color:$main-bg;
+}
+
+.app-nav__footer-postion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

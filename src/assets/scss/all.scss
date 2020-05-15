@@ -1,0 +1,13 @@
+
+// Custom styles
+@import "theme";
+@import "shared/all";
+
+// Kendo Customization
+@import "kendo-bootstrap-overrides/all";
+
+// Dependencies
+@import "~@progress/kendo-theme-bootstrap/scss/all";
+
+@import "~bootstrap/scss/bootstrap";
+

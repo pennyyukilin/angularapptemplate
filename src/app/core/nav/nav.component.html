@@ -1,0 +1,15 @@
+<div class="app-nav__sidenav">
+  <div class="app__header">
+    &nbsp;&nbsp;&nbsp;Angular Template
+  </div>
+  <div class="app-nav__panelbar-wrapper">
+      <kendo-panelbar (stateChange)="stateChange($event)">
+        <kendo-panelbar-item *ngFor="let item of items" [title]="item.title" [routerLink]="item.routerLink" [id]="item.routerLink">
+            <kendo-panelbar-item [title]="childItem.title" *ngFor="let childItem of item.children"
+            [routerLink]="childItem.routerLink"  [id]="childItem?.routerLink"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+    </kendo-panelbar>
+    <div class="app-nav__footer-postion"><app-footer></app-footer></div>
+  </div>
+  
+</div>

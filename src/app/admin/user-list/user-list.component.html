@@ -1,0 +1,19 @@
+<h3>Admin</h3>
+<kendo-grid [data]="allUsers | async" [height]="410">
+  <kendo-grid-column field="userId" title="User ID" width="40">
+  </kendo-grid-column>
+  <kendo-grid-column field="userName" title="User Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="email" title="Email" width="250">
+  </kendo-grid-column>
+</kendo-grid>
+
+<div>
+    <button (click)="openAddNewUserWindow()" class="k-button k-button-icontext k-primary">
+      <span class="k-icon k-i-add"></span> Add user
+    </button>
+  </div>
+
+
+  <div kendoWindowContainer></div>
+

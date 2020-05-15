@@ -1,0 +1,88 @@
+<h3>Kendo Form Template</h3>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 example-col">
+    <div class="card">
+      <div class="card-block">
+        <form class="k-form">
+          <label class="k-form-field">
+              <span>First Name</span>
+              <input class="k-textbox" placeholder="Your Name" />
+            </label>
+          <label class="k-form-field">
+              <span>Last Name</span>
+              <input class="k-textbox" value="Batista" placeholder="Your Last Name" />
+            </label>
+          <div class="k-form-field">
+            <label>Gender</label>
+            <input type="radio" name="gender" id="female" class="k-radio">
+            <label class="k-radio-label" for="female">Female</label>
+            <input type="radio" name="gender" id="male" class="k-radio" checked="checked">
+            <label class="k-radio-label" for="male">Male</label>
+          </div>
+          <label class="k-form-field">
+              <span>Email <span class="k-required">*</span></span>
+              <input type="email" class="k-textbox" value="bernardo.batista@progress.com" placeholder="Your Email" />
+            </label>
+          <label class="k-form-field">
+              <span>Company<span class="k-field-info">optional</span></span>
+              <input class="k-textbox" placeholder="Your Company" />
+            </label>
+          <label class="k-form-field">
+              <span>Display Name by User ID</span>
+              <kendo-autocomplete
+                #autocompletebyid
+                [data]="listPerson"
+                [valueField]="'username'"
+                [filterable]="true"
+                (filterChange)="handleFilter($event)"
+                [placeholder]="'e.g. U587212'"
+              >
+              </kendo-autocomplete>
+            </label>
+          <label class="k-form-field">
+              <span>Password</span>
+              <input type="password" class="k-textbox" value="123456" placeholder="Your password" />
+            </label>
+          <label class="k-form-field">
+              <input type="checkbox" id="auth-2fa" class="k-checkbox" checked="checked">
+              <label class="k-checkbox-label" for="auth-2fa">Enable two-factor authentication</label>
+          </label>
+
+          <label class="k-form-field">
+              <span>Dropdownlist</span>
+              <kendo-dropdownlist [data]="listItems" [value]="'Basketball'"></kendo-dropdownlist>
+          </label>
+
+          <label class="k-form-field">
+              <span>AutoComplete</span>
+               <kendo-autocomplete [data]="listItems" [placeholder]="'Your favorite sport'"></kendo-autocomplete>
+          </label>
+
+          <label class="k-form-field">
+              <span>ComboBox</span>
+              <kendo-combobox [data]="listItems" [value]="'Basketball'"></kendo-combobox>
+          </label>
+
+          <label class="k-form-field">
+              <span>MultiSelect</span>
+              <kendo-multiselect [data]="listItems" [value]="value" [placeholder]="'Your favorite sports'"></kendo-multiselect>
+          </label>
+
+          <label class="k-form-field">
+              <span>TextBox</span>
+               <kendo-textbox-container floatingLabel="First name">
+                  <input kendoTextBox />
+               </kendo-textbox-container>
+          </label>
+
+          <div class="text-right">
+            <button type="button" class="k-button">Cancel</button>
+            <button type="button" class="k-button k-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+</div>

@@ -1,0 +1,9 @@
+<h3>Order List</h3>
+<kendo-grid [data]="allOrders | async" [height]="410">
+  <kendo-grid-column field="orderID" title="Order ID" width="150">
+  </kendo-grid-column>
+  <kendo-grid-column field="customer" title="Customer" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="orderDate" title="orderDate" width="250">
+  </kendo-grid-column>
+</kendo-grid>

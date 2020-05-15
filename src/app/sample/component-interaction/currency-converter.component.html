@@ -1,0 +1,37 @@
+
+<button type="button" class="k-button" (click)="showTime($event)">Current Time</button>
+
+{{msg}}
+
+<h4>User Info:</h4>
+<label>First Name：<input #firstName type="text" (change)="0" /></label><br />
+<label>Last Name：<input #lastName type="text" (change)="0" /></label>
+<div>Hello {{firstName.value}} {{lastName.value}}!</div>
+
+<h4>2-way binding:</h4>
+<label for="comment">Comment：</label>
+<input id="comment" name="comment" type="text" [(ngModel)]="comment" />
+<div>Uppercase Piped Content: {{comment | uppercase}}</div>
+<div>Titlecase Piped Content: {{comment | titlecase}}</div>
+
+
+<div [style.font-size.%]="size">Style binding with Unit (font-size:150%)</div>
+
+<p>Conversions</p>
+<ul>
+
+  <span *ngFor="let c of conversions">
+        <button type="button" class="k-button" (click)="onclick(c)">{{c.fromUnit}}</button>
+  </span>
+</ul>
+
+<p>Now Viewing: {{edit.item?.fromUnit}}</p>
+<app-conversion-detail [item]="selected"></app-conversion-detail>
+
+<p>Now Editing: {{edit.item?.fromUnit}}</p>
+<app-conversion-edit #edit [item]="selected" (edited)="onedited($event)">
+</app-conversion-edit>
+
+
+
+<ng-content></ng-content>

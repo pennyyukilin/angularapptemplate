@@ -1,0 +1,20 @@
+<div *ngIf="loading" >
+    <span class="k-icon k-i-loading"></span>
+</div>
+<div class="app-layout__container">
+
+  <div [class]="appNavToggleClass">
+    <button type="button" class="k-button" (click)="toggle($event)">{{ toggleButtonText }}</button>
+  </div>
+  <div [class]="appNavSidenavClass">
+    <app-nav></app-nav>
+  </div>
+  <div [class]="appLayoutContentClass">
+    <app-toolbar>
+    </app-toolbar>
+    <div class="app-layout__router-outlet-wrapper">
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>

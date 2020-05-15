@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top app-nav-top__bg">
+    <img src="../../../assets/images/logo.png" class="app-nav-top__logo" />
+    <a class="navbar-brand" href="#">Angular Template</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown" ngbDropdown *ngFor="let item of items" [class.active]="router.url.includes(item.key)">
+              <a class="nav-link dropdown-toggle " [id]="item.title" ngbDropdownToggle *ngIf="item.children != null">{{item.title}}</a>
+              <a class="nav-link" [id]="item.title" [routerLink]="item.routerLink" *ngIf="item.children == null">{{item.title}}</a>
+              <div class="dropdown-menu" aria-labelledby="item.routerLink" ngbDropdownMenu>
+                <a class="dropdown-item"  *ngFor="let childItem of item.children"  [routerLink]="childItem.routerLink">{{childItem.title}}</a>
+              </div>
+            </li>
+      </ul>
+      <div class="form-inline app-nav-top__font">
+          <span *ngIf="userName != undefined" class="hidden-xs">{{ userName }}</span>
+      </div>
+    </div>
+
+  </nav>
